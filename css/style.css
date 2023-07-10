@@ -429,7 +429,7 @@ button:focus{
     bottom: -100%;
     right: 0;
     height: 100%;
-    background: hsla(96, 100%, 16%, 0.6);
+    background: hsla(96, 100%, 16%, 0.705);
     padding: 12px 12px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
