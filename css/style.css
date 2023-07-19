@@ -313,7 +313,6 @@ button:focus{
 .about-section-box .img-fluid{
 	box-shadow: -10px -10px 0px hsl(96, 100%, 16%);
 }
-.inner-column{}
 .inner-column h1{
 	font-family: 'Arbutus Slab', serif;
 	font-size: 30px;
@@ -342,7 +341,7 @@ button:focus{
 
 
 .qt-background{
-	background: url(../images/qt-bg.jpg) no-repeat;
+	background: url(../images/qt-bg1.png) no-repeat;
 	background-size: cover;
 	padding: 100px 0;
 	background-attachment: fixed;
@@ -696,7 +695,7 @@ button:focus{
     line-height: 50px;
     display: inline-block;
     padding: 0 10px;
-    float: left;
+    float:left;
     width: 100%;
 	border: none;
 	cursor: pointer;
@@ -893,7 +892,7 @@ button:focus{
 }
 
 .form-control{
-	border-radius: 0px;
+	border-radius: 5px;
 	min-height: 50px;
 }
 .form-control:focus{
