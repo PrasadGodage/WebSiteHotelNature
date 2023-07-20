@@ -52,7 +52,15 @@
 			position: absolute;
 		}
 
-		 
+		form{
+            background: #c8d3c88e;
+			display: flex;
+			flex-direction: column;
+			padding: 2vw 4vw;
+			width: 90%;
+			max-width: 600px;
+			border-radius: 10px;
+		} 
 	  </style>
 
 </head>
@@ -63,7 +71,7 @@
 		<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			<div class="container">
 				<a class="navbar-brand" href="index.html">
-					<img src="images/nature1.png" alt="" width="350px;" height="60px;"/>
+					<img src="images/agro.png" alt="" width="350px;" height="60px;"/>
 					<!-- <span style="font-weight:500px; font-size:38px; line-height: 40px;">GV SOFT</span> -->
 				</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food" aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -85,14 +93,14 @@
 								<a class="dropdown-item" href="lodging.html">Lodging</a> 
 							</div>
 						</li>-->
-						<li class="nav-item dropdown">
+						<!-- <li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle" href="#" id="dropdown-a" data-toggle="dropdown">Blog</a>
 							<div class="dropdown-menu" aria-labelledby="dropdown-a">
 								<a class="dropdown-item" href="blog.html">foods</a>
 								<a class="dropdown-item" href="lodge.html">Lodging</a>
 								<a class="dropdown-item" href="staff.html">Staff</a>
 							</div>
-						</li>
+						</li> -->
 						<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
 						<li class="nav-item active"><a class="nav-link" href="contact.html">Contact</a></li>					</ul>
 				</div>
@@ -138,9 +146,10 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-lg-12 col-sm-12 col-xs-12">
+				<div class="col-lg-3 col-sm-12 col-xs-12"></div>
+				<div class="col-lg-9 col-sm-12 col-xs-12">
 					<div class="contact-block">
-						<form id="contactForm">
+						<form id="contactForm text-center" action="send_email.php" method="post">
 							<div class="row">
 								<!-- <div class="col-md-6">
 									<h3>Book a table</h3>
@@ -173,8 +182,8 @@
 									</div>
 								</div> -->
       
-								<div class="col-md-3" ></div>
-								<div class="col-md-6 Shadow p-2">
+								<!-- <div class="col-md-3" ></div> -->
+								<div class="col-md-12 Shadow p-2">
 									<h3 style="text-align: center;">Contact Details</h3>
 										<div class="col-md-12">
 											<div class="form-group">
@@ -187,7 +196,7 @@
 												<input type="text" placeholder="Your Email" id="email" class="form-control" name="email" required data-error="Please enter your email">
 												<div class="help-block with-errors"></div>
 											</div> 
-										</div>
+										</div> 
 										<div class="col-md-12">
 											<div class="form-group">
 												<input type="text" placeholder="Your Numbar" id="phone" class="form-control" name="phone" required data-error="Please enter your Numbar">
@@ -197,7 +206,7 @@
 										<div class="col-md-12">
 											<div class="form-group">
 												<!-- <input type="text" placeholder="Your Numbar" id="phone" class="form-control" name="phone" required data-error="Please enter your Numbar"> -->
-												<textarea id="massage" rows="5" placeholder="How can we help you ?" class="form-control" name="massage" required data-error="Please enter your Comments."></textarea>
+												<textarea id="massage" rows="5" placeholder="How can we help you ?" class="form-control" name="message" required data-error="Please enter your Comments."></textarea>
 												<div class="help-block with-errors"></div>
 											</div> 
 										</div>
@@ -209,14 +218,17 @@
 												<div class="clearfix"></div> 
 											</div>
 										</div>
-								<div class="col-md-3" ></div>
+								<!-- <div class="col-md-3" ></div> -->
 							</div>            
 						</form>
 					</div>
 				</div>
+				<div class="col-lg-3 col-sm-12 col-xs-12"></div>
 			</div>
 		</div>
 	</div>
+
+
 	
     <!-- End Contacts Form info -->
 	
@@ -246,7 +258,7 @@
 						<h4>Location</h4>
 						<p class="lead">
 							Nature agro resort, </p>
-				    <p>kolhewadi phata vadgaon pan, Sangamner,</p>
+				    <p>Kolhewadi Phata Vadgaon Pan, Sangamner</p>
 						</p>
 					</div>
 				</div>
@@ -259,25 +271,25 @@
 	<footer class="footer-area bg-f">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-3 col-md-6">
+				<div class="col-lg-5 col-md-6 ml-5">
 					<h3>About Us</h3>
 					<p>The advice I received was to do what felt right. So, I took that, and here I am in the Hotel with their menu.</p>
 					<p>Savor the meal that lives up to the highest standards while fulfilling your wildest fantasies that served you.</p>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
 					<p><span class="text-color">Monday: </span>Closed</p>
 					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
 					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
 					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
-				</div>
-				<div class="col-lg-3 col-md-6">
+				</div> -->
+				<div class="col-lg-4 col-md-6 ml-5">
 					<h3>Contact information</h3>
-					<p class="lead">kolhewadi phata vadgaon pan, Sangamner, Maharashtra 422605</p>
+					<p class="lead">Kolhewadi Phata Vadgaon Pan, Sangamner Maharashtra 422605</p>
 					<p class="lead"><a href="#"></a></p>
 					<p><a href="#"></a></p>
 				</div>
-				<div class="col-lg-3 col-md-6">
+				<!-- <div class="col-lg-3 col-md-6">
 					<h3>Subscribe</h3>
 					<div class="subscribe_form">
 						<form class="subscribe_form">
@@ -285,14 +297,14 @@
 							<button type="submit" class="submit">SUBSCRIBE</button>
 							<div class="clearfix"></div>
 						</form>
-					</div>
-					<ul class="list-inline f-social">
+					</div> -->
+					<!-- <ul class="list-inline f-social">
 						<li class="list-inline-item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
 						<li class="list-inline-item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 		</div>
@@ -356,6 +368,26 @@
 	  });
 	}
   </script>
+
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+   <script>
+		function sendEmail(){
+			Email.send({
+				Host : "smtp.yourisp.com",
+				Username : "username",
+				Password : "password",
+				To : 'them@website.com',
+				From : "you@isp.com",
+				Subject : "This is the subject",
+				Body : "And this is the body"
+			}).then(
+			message => alert(message)
+			);
+		}
+  </script>
+
+ 
 
 </body>
 </html>
