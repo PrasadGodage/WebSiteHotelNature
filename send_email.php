@@ -1,40 +1,50 @@
 <?php
 
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        # FIX: Replace this email with recipient email
+        $mail_to = "soulsoft.gauravvanam@gmail.com";
+        
+        # Sender Data
+        $subject = trim($_POST["subject"]);
+        $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
+        $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $phone = trim($_POST["phone"]);
+        $message = trim($_POST["message"]);
+        
+        if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($phone) OR empty($subject) OR empty($message)) {
+            # Set a 400 (bad request) response code and exit.
+            http_response_code(400);
+            echo "Please complete the form and try again.";
+            exit;
+        }
+        
+        # Mail Content
+        $content = "Name: $name\n";
+        $content .= "Email: $email\n\n";
+        $content .= "Phone: $phone\n";
+        $content .= "Message:\n$message\n";
 
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
+        # email headers.
+        $headers = "From: $name <$email>";
 
-require 'phpmailer/src/Exception.php';
-require 'phpmailer/src/PHPMailer.php';
-require 'phpmailer/src/SMTP.php';
+        # Send the email.
+        $success = mail($mail_to, $subject, $content, $headers);
+        if ($success) {
+            # Set a 200 (okay) response code.
+            http_response_code(200);
+            echo "Thank You! Your message has been sent.";
+        } else {
+            # Set a 500 (internal server error) response code.
+            http_response_code(500);
+            echo "Oops! Something went wrong, we couldn't send your message.";
+        }
 
-
-    $subject = "Contact Form";
-    $msg = $_POST['message'];
-    $tomailid = $_POST['email'];
-	$mail = new PHPMailer(true);
-	$mail->SMTPDebug = 3;
-
-    $frommailid = "soulsoft.gauravvanam@gmail.com";
-    $password = "soulsoft@gaurav";
-
-	$mail->isSMTP();
-	// $mail->Host = 'order.gvsoft.in';
-	$mail->Host = 'smtp.gmail.com';
-	$mail->SMTPAuth = true;
-	$mail->Username = $frommailid; //Your Mail
-	$mail->Password = $password; //Your Gmail APP Code
-
-	$mail->SMTPSecure = 'ssl';
-	$mail->Port = 465;
-	$mail->setFrom($frommailid); //Your Mail
-	$mail->addAddress($tomailid);
-	$mail->isHTML(true);
-	$mail->Subject = $subject;
-	$mail->Body = $msg;
-
-	$mail->send();
-
+    } else {
+        # Not a POST request, set a 403 (forbidden) response code.
+        http_response_code(403);
+        echo "There was a problem with your submission, please try again.";
+    }
+?>
 
 

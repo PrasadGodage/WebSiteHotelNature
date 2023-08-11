@@ -150,11 +150,7 @@
 				<div class="col-lg-3 col-sm-12 col-xs-12"></div>
 				<div class="col-lg-9 col-sm-12 col-xs-12">
 					<div class="contact-block">
-<<<<<<< HEAD
 						<form id="contactForm text-center" action="send_email.php" method="post">
-=======
-						<form id="contactForm text-center" onclick="sendEmail(); reset(); return false;">
->>>>>>> cf3e4ce623c762de11a85a70c900ae4c4be86fb8
 							<div class="row">
 								<!-- <div class="col-md-6">
 									<h3>Book a table</h3>
@@ -276,18 +272,18 @@
 	<footer class="footer-area bg-f">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-5 col-md-6 ml-5">
+				<!-- <div class="col-lg-5 col-md-6 ml-5">
 					<h3>About Us</h3>
 					<p>The advice I received was to do what felt right. So, I took that, and here I am in the Hotel with their menu.</p>
 					<p>Savor the meal that lives up to the highest standards while fulfilling your wildest fantasies that served you.</p>
-				</div>
-				<!-- <div class="col-lg-3 col-md-6">
+				</div> -->
+				<div class="col-lg-3 col-md-6">
 					<h3>Opening hours</h3>
-					<p><span class="text-color">Monday: </span>Closed</p>
+					<!-- <p><span class="text-color">Monday: </span>Closed</p> -->
 					<p><span class="text-color">Tue-Wed :</span> 9:Am - 10PM</p>
 					<p><span class="text-color">Thu-Fri :</span> 9:Am - 10PM</p>
-					<p><span class="text-color">Sat-Sun :</span> 5:PM - 10PM</p>
-				</div> -->
+					<p><span class="text-color">Sat-Sun :</span> 9:PM - 10PM</p>
+				</div>
 				<div class="col-lg-4 col-md-6 ml-5">
 					<h3>Contact information</h3>
 					<p class="lead">Kolhewadi Phata Vadgaon Pan, Sangamner Maharashtra 422605</p>
@@ -355,7 +351,16 @@
 				}
 			]
 		});	
+
+// 		$(document).ready(function(){
+//   $("#contactForm").submit(function(){
+//     $.ajax({url: "send_email.php", success: function(result){
+//       $("#div1").html(result);
+//     }});
+//   }); 
+// });
 	</script>
+	
 
 <script>
 	function initMap() {
